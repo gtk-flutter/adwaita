@@ -42,6 +42,15 @@ class Colors {
   static const Color darkHeaderBarBackground = Color(0xFF303030);
   static const Color darkHeaderBarForeground = Color(0xFFFFFFFF);
 
+  static const Color viewForeground = Color(0xFF000000);
+  static const Color darkViewForeground = Color(0xFFffffff);
+
+  static Color button = viewForeground.withAlpha(25);
+  static Color darkButton = darkViewForeground.withAlpha(25);
+
+  static Color border = dark5.withOpacity(0.18);
+  static Color darkBorder = dark5.withOpacity(0.75);
+
   static const Color red = Color(0xFFff0000);
 
   static MaterialColor createMaterialColor(Color color) {

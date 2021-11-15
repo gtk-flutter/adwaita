@@ -38,7 +38,6 @@ final lightTheme = ThemeData(
     backgroundColor: _lightColorScheme.background,
     dialogBackgroundColor: _lightColorScheme.background,
     errorColor: _lightColorScheme.error,
-    // textTheme: _textTheme,
     indicatorColor: _lightColorScheme.secondary,
     applyElevationOverlayColor: false,
     colorScheme: _lightColorScheme,
@@ -57,53 +56,86 @@ final lightTheme = ThemeData(
       selectedItemColor: _lightColorScheme.primary,
       unselectedItemColor: adwaita.Colors.dark3,
     ),
-    inputDecorationTheme: const InputDecorationTheme(
-      border: OutlineInputBorder(),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: adwaita.Colors.button,
+      enabledBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(8.0),
+        ),
+        borderSide: BorderSide(
+            width: 1.0, style: BorderStyle.solid, color: Colors.transparent),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(8.0),
+        ),
+        borderSide: BorderSide(
+            width: 1.0,
+            style: BorderStyle.solid,
+            color: adwaita.Colors.blueAccent),
+      ),
     ));
 
 final darkTheme = ThemeData(
-  tabBarTheme: TabBarTheme(labelColor: _darkColorScheme.onBackground),
-  dialogTheme: DialogTheme(
-      backgroundColor: adwaita.Colors.dark3,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-          side: BorderSide(color: Colors.white.withOpacity(0.2)))),
-  brightness: Brightness.dark,
-  primaryColor: _darkColorScheme.primary,
-  primaryColorBrightness:
-      ThemeData.estimateBrightnessForColor(_darkColorScheme.primary),
-  canvasColor: _darkColorScheme.background,
-  scaffoldBackgroundColor: _darkColorScheme.background,
-  bottomAppBarColor: _darkColorScheme.surface,
-  cardColor: _darkColorScheme.surface,
-  dividerColor: _darkColorScheme.onSurface.withOpacity(0.12),
-  backgroundColor: _darkColorScheme.background,
-  dialogBackgroundColor: _darkColorScheme.background,
-  errorColor: _darkColorScheme.error,
-  // textTheme: _textTheme,
-  indicatorColor: _darkColorScheme.secondary,
-  applyElevationOverlayColor: true,
-  colorScheme: _darkColorScheme,
-  buttonTheme: _buttonThemeData,
-  textButtonTheme: _darkTextButtonThemeData,
-  elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
-  outlinedButtonTheme: _darkOutlinedButtonThemeData,
-  switchTheme: _switchStyleDark,
-  checkboxTheme: _checkStyleDark,
-  radioTheme: _radioStyleDark,
-  primaryColorDark: adwaita.Colors.blueAccent,
-  appBarTheme: _appBarDarkTheme,
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: adwaita.Colors.blueAccent,
-  ),
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    selectedItemColor: _darkColorScheme.primary,
-    unselectedItemColor: adwaita.Colors.warmGrey.shade300,
-  ),
-  inputDecorationTheme: const InputDecorationTheme(
-    border: OutlineInputBorder(),
-  ),
-);
+    tabBarTheme: TabBarTheme(labelColor: _darkColorScheme.onBackground),
+    dialogTheme: DialogTheme(
+        backgroundColor: adwaita.Colors.dark3,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(6),
+            side: BorderSide(color: Colors.white.withOpacity(0.2)))),
+    brightness: Brightness.dark,
+    primaryColor: _darkColorScheme.primary,
+    primaryColorBrightness:
+        ThemeData.estimateBrightnessForColor(_darkColorScheme.primary),
+    canvasColor: _darkColorScheme.background,
+    scaffoldBackgroundColor: _darkColorScheme.background,
+    bottomAppBarColor: _darkColorScheme.surface,
+    cardColor: _darkColorScheme.surface,
+    dividerColor: _darkColorScheme.onSurface.withOpacity(0.12),
+    backgroundColor: _darkColorScheme.background,
+    dialogBackgroundColor: _darkColorScheme.background,
+    errorColor: _darkColorScheme.error,
+    // textTheme: _textTheme,
+    indicatorColor: _darkColorScheme.secondary,
+    applyElevationOverlayColor: true,
+    colorScheme: _darkColorScheme,
+    buttonTheme: _buttonThemeData,
+    textButtonTheme: _darkTextButtonThemeData,
+    elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
+    outlinedButtonTheme: _darkOutlinedButtonThemeData,
+    switchTheme: _switchStyleDark,
+    checkboxTheme: _checkStyleDark,
+    radioTheme: _radioStyleDark,
+    primaryColorDark: adwaita.Colors.blueAccent,
+    appBarTheme: _appBarDarkTheme,
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: adwaita.Colors.blueAccent,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: _darkColorScheme.primary,
+      unselectedItemColor: adwaita.Colors.warmGrey.shade300,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: adwaita.Colors.darkButton,
+      enabledBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(8.0),
+        ),
+        borderSide: BorderSide(
+            width: 1.0, style: BorderStyle.solid, color: Colors.transparent),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(8.0),
+        ),
+        borderSide: BorderSide(
+            width: 1.0,
+            style: BorderStyle.solid,
+            color: adwaita.Colors.blueAccent),
+      ),
+    ));
 
 // Special casing some widgets to get the desired Adwaita look
 // Buttons
@@ -155,12 +187,23 @@ final _darkOutlinedButtonThemeData = OutlinedButtonThemeData(
 
 final _textButtonThemeData = TextButtonThemeData(
     style: TextButton.styleFrom(
-        visualDensity: _commonButtonStyle.visualDensity,
-        primary: Colors.black));
+  visualDensity: _commonButtonStyle.visualDensity,
+  backgroundColor: adwaita.Colors.button,
+  primary: adwaita.Colors.dark4,
+  shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      side: BorderSide(color: Colors.transparent)),
+));
 
 final _darkTextButtonThemeData = TextButtonThemeData(
     style: TextButton.styleFrom(
-        visualDensity: _darkCommonButtonStyle.visualDensity));
+  visualDensity: _darkCommonButtonStyle.visualDensity,
+  backgroundColor: adwaita.Colors.darkButton,
+  primary: Colors.white,
+  shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      side: BorderSide(color: Colors.transparent)),
+));
 
 ElevatedButtonThemeData _getElevatedButtonThemeData(Brightness brightness) {
   if (brightness == Brightness.light) {
