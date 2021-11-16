@@ -1,7 +1,7 @@
 name: adwaita
 description: Implementation of libadwaita for flutter/dart.
-version: 0.0.2
-homepage: https://github.com/gtk-flutter/libadwaita
+version: 0.0.3
+homepage: https://github.com/gtk-flutter/adwaita
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
