@@ -72,7 +72,7 @@ class AdwaitaThemeData {
               color: Colors.transparent,
             ),
           ),
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(8.0),
             ),
@@ -356,7 +356,7 @@ class AdwaitaThemeData {
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorLight),
   );
 
-  static final _appBarLightTheme = const AppBarTheme(
+  static const _appBarLightTheme = AppBarTheme(
     elevation: 1.0,
     systemOverlayStyle: SystemUiOverlayStyle.light,
     backgroundColor: AdwaitaColors.headerBarBackground,
@@ -365,7 +365,7 @@ class AdwaitaThemeData {
     actionsIconTheme: IconThemeData(color: AdwaitaColors.dark3),
   );
 
-  static final _appBarDarkTheme = const AppBarTheme(
+  static const _appBarDarkTheme = AppBarTheme(
     elevation: 1.0,
     systemOverlayStyle: SystemUiOverlayStyle.dark,
     backgroundColor: AdwaitaColors.darkHeaderBarBackground,
