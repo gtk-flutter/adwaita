@@ -5,8 +5,8 @@ import 'package:flutter/material.dart' show Color, MaterialColor;
 // and https://gitlab.gnome.org/Teams/Design/brand/-/blob/master/brand-book.pdf
 
 /// The Adwaita color palette
-class Colors {
-  Colors._();
+class AdwaitaColors {
+  const AdwaitaColors._();
 
   static const Color blueAccent = Color(0xFF4a86cf);
 
