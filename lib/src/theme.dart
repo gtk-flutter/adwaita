@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 import 'package:adwaita/src/utils/colors.dart';
 
 class AdwaitaThemeData {
