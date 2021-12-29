@@ -16,6 +16,42 @@ class Colors {
   static const Color blue4 = Color(0xFF1c71d8);
   static const Color blue5 = Color(0xFF1a5fb4);
 
+  static const Color green1 = Color(0xFF8ff0a4);
+  static const Color green2 = Color(0xFF57e389);
+  static const Color green3 = Color(0xFF33d17a);
+  static const Color green4 = Color(0xFF2ec27e);
+  static const Color green5 = Color(0xFF26a269);
+
+  static const Color yellow1 = Color(0xFFf9f06b);
+  static const Color yellow2 = Color(0xFFf8e45c);
+  static const Color yellow3 = Color(0xFFf6d32d);
+  static const Color yellow4 = Color(0xFFf5c211);
+  static const Color yellow5 = Color(0xFFe5a50a);
+
+  static const Color orange1 = Color(0xFFffbe6f);
+  static const Color orange2 = Color(0xFFffa348);
+  static const Color orange3 = Color(0xFFff7800);
+  static const Color orange4 = Color(0xFFe66100);
+  static const Color orange5 = Color(0xFFc64600);
+
+  static const Color red1 = Color(0xFFf66151);
+  static const Color red2 = Color(0xFFed333b);
+  static const Color red3 = Color(0xFFe01b24);
+  static const Color red4 = Color(0xFFc01c28);
+  static const Color red5 = Color(0xFFa51d2d);
+
+  static const Color purple1 = Color(0xFFdc8add);
+  static const Color purple2 = Color(0xFFc061cb);
+  static const Color purple3 = Color(0xFF9141ac);
+  static const Color purple4 = Color(0xFF813d9c);
+  static const Color purple5 = Color(0xFF613583);
+
+  static const Color brown1 = Color(0xFFcdab8f);
+  static const Color brown2 = Color(0xFFb5835a);
+  static const Color brown3 = Color(0xFF986a44);
+  static const Color brown4 = Color(0xFF865e3c);
+  static const Color brown5 = Color(0xFF63452c);
+
   static const Color light1 = Color(0xFFffffff);
   static const Color light2 = Color(0xFFf6f5f4);
   static const Color light3 = Color(0xFFdeddda);
