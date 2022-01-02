@@ -1,5 +1,5 @@
 name: adwaita
-description: Implementation of libadwaita for flutter/dart.
+description: Adwaita style - The default theme for GTK+ for your Flutter app.
 version: 0.0.3
 homepage: https://github.com/gtk-flutter/adwaita
 

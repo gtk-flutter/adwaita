@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 import 'package:adwaita/src/utils/colors.dart';
 
+/// Generate Adwaita light and dark theme.
 class AdwaitaThemeData {
   const AdwaitaThemeData._();
 
@@ -12,7 +13,7 @@ class AdwaitaThemeData {
     accentColor: AdwaitaColors.blueAccent,
     cardColor: AdwaitaColors.cardBackground,
     backgroundColor: AdwaitaColors.backgroundColor,
-    errorColor: AdwaitaColors.red,
+    errorColor: AdwaitaColors.red5,
     brightness: Brightness.light,
   );
 
@@ -23,10 +24,11 @@ class AdwaitaThemeData {
     accentColor: AdwaitaColors.blueAccent,
     cardColor: AdwaitaColors.darkCardBackground,
     backgroundColor: AdwaitaColors.darkBackgroundColor,
-    errorColor: AdwaitaColors.red,
+    errorColor: AdwaitaColors.red5,
     brightness: Brightness.dark,
   );
 
+  /// A default light theme.
   static ThemeData light() => ThemeData(
         tabBarTheme: TabBarTheme(labelColor: _lightColorScheme.onSurface),
         brightness: Brightness.light,
@@ -85,6 +87,7 @@ class AdwaitaThemeData {
         ),
       );
 
+  /// A default dark theme.
   static ThemeData dark() => ThemeData(
         tabBarTheme: TabBarTheme(labelColor: _darkColorScheme.onBackground),
         dialogTheme: DialogTheme(
@@ -154,8 +157,8 @@ class AdwaitaThemeData {
         ),
       );
 
-// Special casing some widgets to get the desired Adwaita look
-// Buttons
+  // Special casing some widgets to get the desired Adwaita look
+  // Buttons
 
   static final _commonButtonStyle = ButtonStyle(
     visualDensity: VisualDensity.standard,
