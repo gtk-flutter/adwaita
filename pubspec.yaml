@@ -1,6 +1,6 @@
 name: adwaita
 description: Adwaita style - The default theme for GTK+ for your Flutter app.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/gtk-flutter/adwaita
 
 environment:

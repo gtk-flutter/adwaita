@@ -1,3 +1,8 @@
+# 0.0.4
+
+* Add full color palette.
+* Improves documentation.
+
 # 0.0.3
 
 * Change GitHub repo name.
