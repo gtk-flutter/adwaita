@@ -44,3 +44,9 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+
+## Examples
+
+![light_theme](https://raw.githubusercontent.com/gtk-flutter/adwaita/main/images/light.png)
+
+![dark_theme](https://raw.githubusercontent.com/gtk-flutter/adwaita/main/images/dark.png)
