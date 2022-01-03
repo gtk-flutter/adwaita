@@ -51,3 +51,11 @@ jobs:
           flutter doctor
           flutter build macos
         if: matrix.os == 'macos-latest'
+      - name: Build (Windows)
+        run: |
+          flutter config --enable-windows-desktop
+          cd example
+          flutter create --platforms=windows .
+          flutter doctor
+          flutter build windows
+        if: matrix.os == 'windows-latest'
