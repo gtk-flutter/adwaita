@@ -13,7 +13,8 @@ and the Flutter guide for
 
 # Adwaita Theme
 
-![CI](https://github.com/gtk-flutter/adwaita/actions/workflows/flutter.yml/badge.svg)
+![CI](https://github.com/gtk-flutter/adwaita/actions/workflows/ci.yml/badge.svg)
+[![GitHub Super-Linter](https://github.com/gtk-flutter/adwaita/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 Implementation of the adwaita color scheme found in [libadwaita](https://gitlab.gnome.org/GNOME/libadwaita).
 
