@@ -11,6 +11,8 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
+# Adwaita Theme
+
 ![CI](https://github.com/gtk-flutter/adwaita/actions/workflows/flutter.yml/badge.svg)
 
 Implementation of the adwaita color scheme found in [libadwaita](https://gitlab.gnome.org/GNOME/libadwaita).
