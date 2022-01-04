@@ -25,7 +25,7 @@ Inspired by the [yaru theme](https://github.com/ubuntu/yaru.dart) for flutter.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:adwaita/adwaita.dart' as adwaita;
+import 'package:adwaita/adwaita.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
         valueListenable: themeNotifier,
         builder: (_, ThemeMode currentMode, __) {
           return MaterialApp(
-              theme: adwaita.lightTheme,
-              darkTheme: adwaita.darkTheme,
+              theme: AdwaitaThemeData.light(),
+              darkTheme: AdwaitaThemeData.dark(),
               debugShowCheckedModeBanner: false,
               home: MyHomePage(themeNotifier: themeNotifier),
               themeMode: currentMode);

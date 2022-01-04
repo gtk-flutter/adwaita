@@ -1,9 +1,15 @@
-# 0.0.4
+# Changelog
+
+## 0.0.5
+
+* Update README.
+
+## 0.0.4
 
 * Add full color palette.
 * Improves documentation.
 
-# 0.0.3
+## 0.0.3
 
 * Change GitHub repo name.
 * Update TextField and TextButton theme to fit adwaita.
