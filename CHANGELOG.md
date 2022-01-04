@@ -11,7 +11,7 @@
 
 ## 0.0.3
 
-* Change GitHub repo name.
+* Change GitHub repository name.
 * Update TextField and TextButton theme to fit adwaita.
 
 ## 0.0.1
