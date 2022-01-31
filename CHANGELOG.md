@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0
+
+* Add very_good_analysis
+* Update dialog theme
+
 ## 0.0.5
 
 * Update README.
