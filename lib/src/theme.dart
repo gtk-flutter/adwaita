@@ -1,24 +1,26 @@
+import 'package:adwaita/src/utils/colors.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
-import 'package:adwaita/src/utils/colors.dart';
 
 /// Generate Adwaita light and dark theme.
 class AdwaitaThemeData {
   const AdwaitaThemeData._();
 
   static final _lightColorScheme = ColorScheme.fromSwatch(
-    // NOTE(robert-ancell): Light shades from 'Tint' on website, dark shades calculated.
+    // NOTE(robert-ancell): Light shades from 'Tint' on website, dark shades
+    // calculated.
     primarySwatch: AdwaitaColors.primarySwatchColor,
     primaryColorDark: AdwaitaColors.darkBackgroundColor,
     accentColor: AdwaitaColors.blueAccent,
     cardColor: AdwaitaColors.cardBackground,
     backgroundColor: AdwaitaColors.backgroundColor,
     errorColor: AdwaitaColors.red5,
-    brightness: Brightness.light,
   );
 
   static final _darkColorScheme = ColorScheme.fromSwatch(
-    // NOTE(robert-ancell): Light shades from 'Tint' on website, dark shades calculated.
+    // NOTE(robert-ancell): Light shades from 'Tint' on website, dark shades
+    // calculated.
     primarySwatch: AdwaitaColors.primarySwatchColor,
     primaryColorDark: AdwaitaColors.darkBackgroundColor,
     accentColor: AdwaitaColors.blueAccent,
@@ -33,8 +35,6 @@ class AdwaitaThemeData {
         tabBarTheme: TabBarTheme(labelColor: _lightColorScheme.onSurface),
         brightness: Brightness.light,
         primaryColor: _lightColorScheme.primary,
-        primaryColorBrightness:
-            ThemeData.estimateBrightnessForColor(_lightColorScheme.primary),
         canvasColor: _lightColorScheme.background,
         scaffoldBackgroundColor: _lightColorScheme.background,
         bottomAppBarColor: _lightColorScheme.surface,
@@ -42,6 +42,7 @@ class AdwaitaThemeData {
         dividerColor: _lightColorScheme.onSurface.withOpacity(0.12),
         backgroundColor: _lightColorScheme.background,
         dialogBackgroundColor: _lightColorScheme.background,
+        dialogTheme: DialogTheme(backgroundColor: _lightColorScheme.background),
         errorColor: _lightColorScheme.error,
         indicatorColor: _lightColorScheme.secondary,
         applyElevationOverlayColor: false,
@@ -65,22 +66,14 @@ class AdwaitaThemeData {
           filled: true,
           fillColor: AdwaitaColors.button,
           enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8.0),
-            ),
-            borderSide: BorderSide(
-              width: 1.0,
-              style: BorderStyle.solid,
-              color: Colors.transparent,
-            ),
+            borderRadius: BorderRadius.all(Radius.circular(8)),
+            borderSide: BorderSide(color: Colors.transparent),
           ),
           focusedBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(8.0),
+              Radius.circular(8),
             ),
             borderSide: BorderSide(
-              width: 1.0,
-              style: BorderStyle.solid,
               color: AdwaitaColors.blueAccent,
             ),
           ),
@@ -91,18 +84,14 @@ class AdwaitaThemeData {
   static ThemeData dark() => ThemeData(
         tabBarTheme: TabBarTheme(labelColor: _darkColorScheme.onBackground),
         dialogTheme: DialogTheme(
-          backgroundColor: AdwaitaColors.dark3,
+          backgroundColor: _darkColorScheme.background,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(6),
-            side: BorderSide(
-              color: Colors.white.withOpacity(0.2),
-            ),
+            side: BorderSide(color: Colors.white.withOpacity(0.2)),
           ),
         ),
         brightness: Brightness.dark,
         primaryColor: _darkColorScheme.primary,
-        primaryColorBrightness:
-            ThemeData.estimateBrightnessForColor(_darkColorScheme.primary),
         canvasColor: _darkColorScheme.background,
         scaffoldBackgroundColor: _darkColorScheme.background,
         bottomAppBarColor: _darkColorScheme.surface,
@@ -135,24 +124,14 @@ class AdwaitaThemeData {
           filled: true,
           fillColor: AdwaitaColors.darkButton,
           enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8.0),
-            ),
-            borderSide: BorderSide(
-              width: 1.0,
-              style: BorderStyle.solid,
-              color: Colors.transparent,
-            ),
+            borderRadius: BorderRadius.all(Radius.circular(8)),
+            borderSide: BorderSide(color: Colors.transparent),
           ),
           focusedBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(8.0),
+              Radius.circular(8),
             ),
-            borderSide: BorderSide(
-              width: 1.0,
-              style: BorderStyle.solid,
-              color: AdwaitaColors.blueAccent,
-            ),
+            borderSide: BorderSide(color: AdwaitaColors.blueAccent),
           ),
         ),
       );
@@ -182,7 +161,7 @@ class AdwaitaThemeData {
 
   static final _buttonThemeData = ButtonThemeData(
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(4.0),
+      borderRadius: BorderRadius.circular(4),
     ),
   );
 
@@ -360,7 +339,7 @@ class AdwaitaThemeData {
   );
 
   static const _appBarLightTheme = AppBarTheme(
-    elevation: 1.0,
+    elevation: 1,
     systemOverlayStyle: SystemUiOverlayStyle.light,
     backgroundColor: AdwaitaColors.headerBarBackground,
     foregroundColor: AdwaitaColors.headerBarForeground,
@@ -369,7 +348,7 @@ class AdwaitaThemeData {
   );
 
   static const _appBarDarkTheme = AppBarTheme(
-    elevation: 1.0,
+    elevation: 1,
     systemOverlayStyle: SystemUiOverlayStyle.dark,
     backgroundColor: AdwaitaColors.darkHeaderBarBackground,
     foregroundColor: AdwaitaColors.darkHeaderBarForeground,

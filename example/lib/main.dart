@@ -1,32 +1,34 @@
-import 'package:flutter/material.dart';
 import 'package:adwaita/adwaita.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
-
   MyApp({Key? key}) : super(key: key);
+
+  final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
 
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<ThemeMode>(
-        valueListenable: themeNotifier,
-        builder: (_, ThemeMode currentMode, __) {
-          return MaterialApp(
-              theme: AdwaitaThemeData.light(),
-              darkTheme: AdwaitaThemeData.dark(),
-              debugShowCheckedModeBanner: false,
-              home: MyHomePage(themeNotifier: themeNotifier),
-              themeMode: currentMode);
-        });
+      valueListenable: themeNotifier,
+      builder: (_, ThemeMode currentMode, __) {
+        return MaterialApp(
+          theme: AdwaitaThemeData.light(),
+          darkTheme: AdwaitaThemeData.dark(),
+          debugShowCheckedModeBanner: false,
+          home: MyHomePage(themeNotifier: themeNotifier),
+          themeMode: currentMode,
+        );
+      },
+    );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  final ValueNotifier<ThemeMode> themeNotifier;
-
   const MyHomePage({Key? key, required this.themeNotifier}) : super(key: key);
+
+  final ValueNotifier<ThemeMode> themeNotifier;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -43,19 +45,18 @@ class _MyHomePageState extends State<MyHomePage> {
           Column(
             children: [
               SwitchListTile(
-                  title: Text(
-                    "Dark mode",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  value: widget.themeNotifier.value == ThemeMode.light
-                      ? false
-                      : true,
-                  onChanged: (value) {
-                    widget.themeNotifier.value =
-                        widget.themeNotifier.value == ThemeMode.light
-                            ? ThemeMode.dark
-                            : ThemeMode.light;
-                  }),
+                title: Text(
+                  'Dark mode',
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+                value: widget.themeNotifier.value != ThemeMode.light,
+                onChanged: (value) {
+                  widget.themeNotifier.value =
+                      widget.themeNotifier.value == ThemeMode.light
+                          ? ThemeMode.dark
+                          : ThemeMode.light;
+                },
+              ),
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
