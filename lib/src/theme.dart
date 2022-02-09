@@ -31,7 +31,8 @@ class AdwaitaThemeData {
   );
 
   /// A default light theme.
-  static ThemeData light() => ThemeData(
+  static ThemeData light({String? fontFamily}) => ThemeData(
+        fontFamily: fontFamily,
         tabBarTheme: TabBarTheme(labelColor: _lightColorScheme.onSurface),
         brightness: Brightness.light,
         primaryColor: _lightColorScheme.primary,
@@ -81,7 +82,8 @@ class AdwaitaThemeData {
       );
 
   /// A default dark theme.
-  static ThemeData dark() => ThemeData(
+  static ThemeData dark({String? fontFamily}) => ThemeData(
+        fontFamily: fontFamily,
         tabBarTheme: TabBarTheme(labelColor: _darkColorScheme.onBackground),
         dialogTheme: DialogTheme(
           backgroundColor: _darkColorScheme.background,

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0
+
+* Add fontFamily parameter in light and dark theme
+
 ## 0.1.0
 
 * Add very_good_analysis
