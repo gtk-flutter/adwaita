@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+* Add border in light dialog theme
+* No Splash for Ink widgets
+
 ## 0.2.0
 
 * Add fontFamily parameter in light and dark theme

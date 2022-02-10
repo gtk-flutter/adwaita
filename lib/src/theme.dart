@@ -30,11 +30,18 @@ class AdwaitaThemeData {
     brightness: Brightness.dark,
   );
 
+  static ShapeBorder getDialogShape([Color color = Colors.white]) =>
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(6),
+        side: BorderSide(color: color.withOpacity(0.2)),
+      );
+
   /// A default light theme.
   static ThemeData light({String? fontFamily}) => ThemeData(
         fontFamily: fontFamily,
         tabBarTheme: TabBarTheme(labelColor: _lightColorScheme.onSurface),
         brightness: Brightness.light,
+        splashFactory: NoSplash.splashFactory,
         primaryColor: _lightColorScheme.primary,
         canvasColor: _lightColorScheme.background,
         scaffoldBackgroundColor: _lightColorScheme.background,
@@ -43,7 +50,10 @@ class AdwaitaThemeData {
         dividerColor: _lightColorScheme.onSurface.withOpacity(0.12),
         backgroundColor: _lightColorScheme.background,
         dialogBackgroundColor: _lightColorScheme.background,
-        dialogTheme: DialogTheme(backgroundColor: _lightColorScheme.background),
+        dialogTheme: DialogTheme(
+          backgroundColor: _lightColorScheme.background,
+          shape: getDialogShape(Colors.black),
+        ),
         errorColor: _lightColorScheme.error,
         indicatorColor: _lightColorScheme.secondary,
         applyElevationOverlayColor: false,
@@ -85,14 +95,8 @@ class AdwaitaThemeData {
   static ThemeData dark({String? fontFamily}) => ThemeData(
         fontFamily: fontFamily,
         tabBarTheme: TabBarTheme(labelColor: _darkColorScheme.onBackground),
-        dialogTheme: DialogTheme(
-          backgroundColor: _darkColorScheme.background,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(6),
-            side: BorderSide(color: Colors.white.withOpacity(0.2)),
-          ),
-        ),
         brightness: Brightness.dark,
+        splashFactory: NoSplash.splashFactory,
         primaryColor: _darkColorScheme.primary,
         canvasColor: _darkColorScheme.background,
         scaffoldBackgroundColor: _darkColorScheme.background,
@@ -101,6 +105,10 @@ class AdwaitaThemeData {
         dividerColor: _darkColorScheme.onSurface.withOpacity(0.12),
         backgroundColor: _darkColorScheme.background,
         dialogBackgroundColor: _darkColorScheme.background,
+        dialogTheme: DialogTheme(
+          backgroundColor: _darkColorScheme.background,
+          shape: getDialogShape(),
+        ),
         errorColor: _darkColorScheme.error,
         // textTheme: _textTheme,
         indicatorColor: _darkColorScheme.secondary,
