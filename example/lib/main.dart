@@ -35,8 +35,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final int _counter = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,12 +86,74 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('You have pushed the add button this many times:'),
-                Text('$_counter', style: Theme.of(context).textTheme.headline4),
-              ],
+            child: Center(
+              child: SizedBox(
+                width: 300,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Title 1',
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
+                        Text(
+                          'Heading',
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Title 2',
+                          style: Theme.of(context).textTheme.headline2,
+                        ),
+                        Text(
+                          'Body',
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Title 3',
+                          style: Theme.of(context).textTheme.headline3,
+                        ),
+                        Text(
+                          'Caption Heading',
+                          style: Theme.of(context).textTheme.headline6,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Title 4',
+                          style: Theme.of(context).textTheme.headline4,
+                        ),
+                        Text(
+                          'Caption',
+                          style: Theme.of(context).textTheme.caption,
+                        ),
+                      ],
+                    ),
+                  ]
+                      .map(
+                        (e) => Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: e,
+                        ),
+                      )
+                      .toList(),
+                ),
+              ),
             ),
           ),
         ],

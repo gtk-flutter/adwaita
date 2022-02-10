@@ -1,7 +1,8 @@
 # Changelog
 
-## 0.3.0
+## 0.5.0
 
+* Match Typography with libadwaita
 * Add border in light dialog theme
 * No Splash for Ink widgets
 

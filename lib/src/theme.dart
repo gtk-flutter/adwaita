@@ -36,6 +36,51 @@ class AdwaitaThemeData {
         side: BorderSide(color: color.withOpacity(0.2)),
       );
 
+  static TextTheme getTextTheme([Brightness brightness = Brightness.light]) {
+    final color = brightness == Brightness.light ? Colors.black : Colors.white;
+    return TextTheme(
+      headline1: TextStyle(
+        fontSize: 26,
+        color: color,
+        fontWeight: FontWeight.bold,
+      ),
+      headline2: TextStyle(
+        fontSize: 21,
+        color: color,
+        fontWeight: FontWeight.bold,
+      ),
+      headline3: TextStyle(
+        fontSize: 20,
+        color: color,
+        fontWeight: FontWeight.bold,
+      ),
+      headline4: TextStyle(
+        fontSize: 17,
+        color: color,
+        fontWeight: FontWeight.bold,
+      ),
+      headline5: TextStyle(
+        fontSize: 15,
+        color: color,
+        fontWeight: FontWeight.bold,
+      ),
+      headline6: TextStyle(
+        fontSize: 13,
+        color: color,
+        fontWeight: FontWeight.w600,
+      ),
+      bodyText1: TextStyle(
+        fontSize: 15,
+        color: color,
+      ),
+      caption: TextStyle(
+        fontSize: 13,
+        color: color,
+        fontWeight: FontWeight.w400,
+      ),
+    );
+  }
+
   /// A default light theme.
   static ThemeData light({String? fontFamily}) => ThemeData(
         fontFamily: fontFamily,
@@ -54,6 +99,7 @@ class AdwaitaThemeData {
           backgroundColor: _lightColorScheme.background,
           shape: getDialogShape(Colors.black),
         ),
+        textTheme: getTextTheme(),
         errorColor: _lightColorScheme.error,
         indicatorColor: _lightColorScheme.secondary,
         applyElevationOverlayColor: false,
@@ -109,8 +155,8 @@ class AdwaitaThemeData {
           backgroundColor: _darkColorScheme.background,
           shape: getDialogShape(),
         ),
+        textTheme: getTextTheme(Brightness.dark),
         errorColor: _darkColorScheme.error,
-        // textTheme: _textTheme,
         indicatorColor: _darkColorScheme.secondary,
         applyElevationOverlayColor: true,
         colorScheme: _darkColorScheme,
