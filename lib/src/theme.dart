@@ -394,17 +394,19 @@ class AdwaitaThemeData {
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorLight),
   );
 
-  static const _appBarLightTheme = AppBarTheme(
+  static final _appBarLightTheme = AppBarTheme(
     elevation: 1,
+    titleTextStyle: getTextTheme().headline5,
     systemOverlayStyle: SystemUiOverlayStyle.light,
     backgroundColor: AdwaitaColors.headerBarBackground,
     foregroundColor: AdwaitaColors.headerBarForeground,
-    iconTheme: IconThemeData(color: AdwaitaColors.dark3),
-    actionsIconTheme: IconThemeData(color: AdwaitaColors.dark3),
+    iconTheme: const IconThemeData(color: AdwaitaColors.dark3),
+    actionsIconTheme: const IconThemeData(color: AdwaitaColors.dark3),
   );
 
-  static const _appBarDarkTheme = AppBarTheme(
+  static final _appBarDarkTheme = AppBarTheme(
     elevation: 1,
+    titleTextStyle: getTextTheme(Brightness.dark).headline5,
     systemOverlayStyle: SystemUiOverlayStyle.dark,
     backgroundColor: AdwaitaColors.darkHeaderBarBackground,
     foregroundColor: AdwaitaColors.darkHeaderBarForeground,

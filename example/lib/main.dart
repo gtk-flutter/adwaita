@@ -1,4 +1,5 @@
 import 'package:adwaita/adwaita.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -38,23 +39,29 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Dark mode'),
+        actions: [
+          SizedBox(
+            height: 30,
+            child: CupertinoSwitch(
+              activeColor: AdwaitaColors.blue3,
+              trackColor: AdwaitaColors.warmGrey,
+              value: widget.themeNotifier.value != ThemeMode.light,
+              onChanged: (value) {
+                widget.themeNotifier.value =
+                    widget.themeNotifier.value == ThemeMode.light
+                        ? ThemeMode.dark
+                        : ThemeMode.light;
+              },
+            ),
+          ),
+        ],
+      ),
       body: Column(
         children: <Widget>[
           Column(
             children: [
-              SwitchListTile(
-                title: Text(
-                  'Dark mode',
-                  style: Theme.of(context).textTheme.bodyText1,
-                ),
-                value: widget.themeNotifier.value != ThemeMode.light,
-                onChanged: (value) {
-                  widget.themeNotifier.value =
-                      widget.themeNotifier.value == ThemeMode.light
-                          ? ThemeMode.dark
-                          : ThemeMode.light;
-                },
-              ),
               Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,

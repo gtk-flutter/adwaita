@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1
+
+* Fix AppBar title font style
+* Improve example
+
 ## 0.5.0
 
 * Match Typography with libadwaita
