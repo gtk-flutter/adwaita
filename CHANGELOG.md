@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.2
+
+* Relicense under MPL-2.0
+
 ## 0.5.1
 
 * Fix AppBar title font style
