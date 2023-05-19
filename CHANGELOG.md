@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0
+
+* Make it compatible with Material 3.0
+
 ## 0.5.2
 
 * Relicense under MPL-2.0

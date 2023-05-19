@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.themeNotifier}) : super(key: key);
+  const MyHomePage({required this.themeNotifier, Key? key}) : super(key: key);
 
   final ValueNotifier<ThemeMode> themeNotifier;
 
@@ -104,11 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Text(
                           'Title 1',
-                          style: Theme.of(context).textTheme.headline1,
+                          style: Theme.of(context).textTheme.displayLarge,
                         ),
                         Text(
                           'Heading',
-                          style: Theme.of(context).textTheme.headline5,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                       ],
                     ),
@@ -117,11 +117,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Text(
                           'Title 2',
-                          style: Theme.of(context).textTheme.headline2,
+                          style: Theme.of(context).textTheme.displayMedium,
                         ),
                         Text(
                           'Body',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ],
                     ),
@@ -130,11 +130,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Text(
                           'Title 3',
-                          style: Theme.of(context).textTheme.headline3,
+                          style: Theme.of(context).textTheme.displaySmall,
                         ),
                         Text(
                           'Caption Heading',
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                         ),
                       ],
                     ),
@@ -143,11 +143,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Text(
                           'Title 4',
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         Text(
                           'Caption',
-                          style: Theme.of(context).textTheme.caption,
+                          style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ],
                     ),

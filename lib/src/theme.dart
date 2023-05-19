@@ -39,41 +39,41 @@ class AdwaitaThemeData {
   static TextTheme getTextTheme([Brightness brightness = Brightness.light]) {
     final color = brightness == Brightness.light ? Colors.black : Colors.white;
     return TextTheme(
-      headline1: TextStyle(
+      displayLarge: TextStyle(
         fontSize: 26,
         color: color,
         fontWeight: FontWeight.bold,
       ),
-      headline2: TextStyle(
+      displayMedium: TextStyle(
         fontSize: 21,
         color: color,
         fontWeight: FontWeight.bold,
       ),
-      headline3: TextStyle(
+      displaySmall: TextStyle(
         fontSize: 20,
         color: color,
         fontWeight: FontWeight.bold,
       ),
-      headline4: TextStyle(
+      headlineMedium: TextStyle(
         fontSize: 17,
         color: color,
         fontWeight: FontWeight.bold,
       ),
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
         fontSize: 15,
         color: color,
         fontWeight: FontWeight.bold,
       ),
-      headline6: TextStyle(
+      titleLarge: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w600,
       ),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
         fontSize: 15,
         color: color,
       ),
-      caption: TextStyle(
+      bodySmall: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w400,
@@ -90,20 +90,16 @@ class AdwaitaThemeData {
         primaryColor: _lightColorScheme.primary,
         canvasColor: _lightColorScheme.background,
         scaffoldBackgroundColor: _lightColorScheme.background,
-        bottomAppBarColor: _lightColorScheme.surface,
         cardColor: _lightColorScheme.surface,
         dividerColor: _lightColorScheme.onSurface.withOpacity(0.12),
-        backgroundColor: _lightColorScheme.background,
         dialogBackgroundColor: _lightColorScheme.background,
         dialogTheme: DialogTheme(
           backgroundColor: _lightColorScheme.background,
           shape: getDialogShape(Colors.black),
         ),
         textTheme: getTextTheme(),
-        errorColor: _lightColorScheme.error,
         indicatorColor: _lightColorScheme.secondary,
         applyElevationOverlayColor: false,
-        colorScheme: _lightColorScheme,
         buttonTheme: _buttonThemeData,
         elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.light),
         outlinedButtonTheme: _outlinedButtonThemeData,
@@ -135,6 +131,12 @@ class AdwaitaThemeData {
             ),
           ),
         ),
+        bottomAppBarTheme: BottomAppBarTheme(color: _lightColorScheme.surface),
+        colorScheme: _lightColorScheme
+            .copyWith(
+              background: _lightColorScheme.background,
+            )
+            .copyWith(error: _lightColorScheme.error),
       );
 
   /// A default dark theme.
@@ -146,20 +148,16 @@ class AdwaitaThemeData {
         primaryColor: _darkColorScheme.primary,
         canvasColor: _darkColorScheme.background,
         scaffoldBackgroundColor: _darkColorScheme.background,
-        bottomAppBarColor: _darkColorScheme.surface,
         cardColor: _darkColorScheme.surface,
         dividerColor: _darkColorScheme.onSurface.withOpacity(0.12),
-        backgroundColor: _darkColorScheme.background,
         dialogBackgroundColor: _darkColorScheme.background,
         dialogTheme: DialogTheme(
           backgroundColor: _darkColorScheme.background,
           shape: getDialogShape(),
         ),
         textTheme: getTextTheme(Brightness.dark),
-        errorColor: _darkColorScheme.error,
         indicatorColor: _darkColorScheme.secondary,
         applyElevationOverlayColor: true,
-        colorScheme: _darkColorScheme,
         buttonTheme: _buttonThemeData,
         textButtonTheme: _darkTextButtonThemeData,
         elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
@@ -190,6 +188,10 @@ class AdwaitaThemeData {
             borderSide: BorderSide(color: AdwaitaColors.blueAccent),
           ),
         ),
+        bottomAppBarTheme: BottomAppBarTheme(color: _darkColorScheme.surface),
+        colorScheme: _darkColorScheme
+            .copyWith(background: _darkColorScheme.background)
+            .copyWith(error: _darkColorScheme.error),
       );
 
   // Special casing some widgets to get the desired Adwaita look
@@ -223,8 +225,8 @@ class AdwaitaThemeData {
 
   static final _outlinedButtonThemeData = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
+      foregroundColor: AdwaitaColors.dark4,
       visualDensity: _commonButtonStyle.visualDensity,
-      primary: AdwaitaColors.dark4,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(5)),
       ),
@@ -233,8 +235,8 @@ class AdwaitaThemeData {
 
   static final _darkOutlinedButtonThemeData = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
+      foregroundColor: Colors.white,
       visualDensity: _commonButtonStyle.visualDensity,
-      primary: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         side: BorderSide(color: Colors.black.withOpacity(0.75)),
@@ -244,9 +246,9 @@ class AdwaitaThemeData {
 
   static final _textButtonThemeData = TextButtonThemeData(
     style: TextButton.styleFrom(
+      foregroundColor: AdwaitaColors.dark4,
       visualDensity: _commonButtonStyle.visualDensity,
       backgroundColor: AdwaitaColors.button,
-      primary: AdwaitaColors.dark4,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(8)),
         side: BorderSide(color: Colors.transparent),
@@ -256,9 +258,9 @@ class AdwaitaThemeData {
 
   static final _darkTextButtonThemeData = TextButtonThemeData(
     style: TextButton.styleFrom(
+      foregroundColor: Colors.white,
       visualDensity: _darkCommonButtonStyle.visualDensity,
       backgroundColor: AdwaitaColors.darkButton,
-      primary: Colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(8)),
         side: BorderSide(color: Colors.transparent),
@@ -396,7 +398,7 @@ class AdwaitaThemeData {
 
   static final _appBarLightTheme = AppBarTheme(
     elevation: 1,
-    titleTextStyle: getTextTheme().headline5,
+    titleTextStyle: getTextTheme().headlineSmall,
     systemOverlayStyle: SystemUiOverlayStyle.light,
     backgroundColor: AdwaitaColors.headerBarBackground,
     foregroundColor: AdwaitaColors.headerBarForeground,
@@ -406,7 +408,7 @@ class AdwaitaThemeData {
 
   static final _appBarDarkTheme = AppBarTheme(
     elevation: 1,
-    titleTextStyle: getTextTheme(Brightness.dark).headline5,
+    titleTextStyle: getTextTheme(Brightness.dark).headlineSmall,
     systemOverlayStyle: SystemUiOverlayStyle.dark,
     backgroundColor: AdwaitaColors.darkHeaderBarBackground,
     foregroundColor: AdwaitaColors.darkHeaderBarForeground,
