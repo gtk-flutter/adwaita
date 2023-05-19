@@ -29,3 +29,4 @@
 build/
 linux/
 example/linux/
+credentials.json
