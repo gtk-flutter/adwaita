@@ -1,7 +1,7 @@
 name: adwaita_example
 description: Demonstrates Adwaita theming
 publish_to: none
-version: 1.0.0+1
+version: 4.0.0+1
 
 environment:
   sdk: ">=2.12.0 <4.0.0"
