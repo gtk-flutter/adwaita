@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.6.0
+## 0.6.0+1
 
 * Fix very_good_analysis version solving failed
 
