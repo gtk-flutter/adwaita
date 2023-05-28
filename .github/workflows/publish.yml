@@ -1,4 +1,4 @@
-name: Publish to pub.dev
+name: Publish Package
 
 on:
   push:
@@ -7,6 +7,4 @@ on:
 
 jobs:
   publish:
-    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
-    # with:
-    #   working-directory: path/to/package/within/repository
+    uses: dart-lang/ecosystem/.github/workflows/publish.yaml@main
