@@ -1,12 +1,10 @@
 # Changelog
 
-## 0.6.0+1
+## 1.0.0
 
-* Fix very_good_analysis version solving failed
-
-## 0.6.0
-
+* Requires Flutter v3 and newer
 * Make it compatible with Material 3.0
+* Fix very_good_analysis version solving failed
 
 ## 0.5.2
 
