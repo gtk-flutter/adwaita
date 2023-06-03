@@ -91,7 +91,9 @@ class AdwaitaThemeData {
         canvasColor: _lightColorScheme.background,
         scaffoldBackgroundColor: _lightColorScheme.background,
         cardColor: _lightColorScheme.surface,
-        dividerColor: _lightColorScheme.onSurface.withOpacity(0.12),
+        dividerTheme: DividerThemeData(
+          color: _lightColorScheme.onSurface.withOpacity(0.12),
+        ),
         dialogBackgroundColor: _lightColorScheme.background,
         dialogTheme: DialogTheme(
           backgroundColor: _lightColorScheme.background,
@@ -149,7 +151,9 @@ class AdwaitaThemeData {
         canvasColor: _darkColorScheme.background,
         scaffoldBackgroundColor: _darkColorScheme.background,
         cardColor: _darkColorScheme.surface,
-        dividerColor: _darkColorScheme.onSurface.withOpacity(0.12),
+        dividerTheme: DividerThemeData(
+          color: _darkColorScheme.onSurface.withOpacity(0.12),
+        ),
         dialogBackgroundColor: _darkColorScheme.background,
         dialogTheme: DialogTheme(
           backgroundColor: _darkColorScheme.background,
