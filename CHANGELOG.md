@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+* Fix divider theme color
+
 ## 1.0.0
 
 * Requires Flutter v3 and newer
