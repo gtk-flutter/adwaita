@@ -11,7 +11,6 @@ class AdwaitaThemeData {
     // NOTE(robert-ancell): Light shades from 'Tint' on website, dark shades
     // calculated.
     primarySwatch: AdwaitaColors.primarySwatchColor,
-    primaryColorDark: AdwaitaColors.darkBackgroundColor,
     accentColor: AdwaitaColors.blueAccent,
     cardColor: AdwaitaColors.cardBackground,
     backgroundColor: AdwaitaColors.backgroundColor,
@@ -22,7 +21,6 @@ class AdwaitaThemeData {
     // NOTE(robert-ancell): Light shades from 'Tint' on website, dark shades
     // calculated.
     primarySwatch: AdwaitaColors.primarySwatchColor,
-    primaryColorDark: AdwaitaColors.darkBackgroundColor,
     accentColor: AdwaitaColors.blueAccent,
     cardColor: AdwaitaColors.darkCardBackground,
     backgroundColor: AdwaitaColors.darkBackgroundColor,
