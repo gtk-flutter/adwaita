@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+* Fix compilation with Flutter 3.13.0
+
 ## 1.0.1
 
 * Fix divider theme color
