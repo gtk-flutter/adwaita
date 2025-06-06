@@ -82,7 +82,7 @@ class AdwaitaThemeData {
   /// A default light theme.
   static ThemeData light({String? fontFamily}) => ThemeData(
         fontFamily: fontFamily,
-        tabBarTheme: TabBarTheme(labelColor: _lightColorScheme.onSurface),
+        tabBarTheme: TabBarThemeData(labelColor: _lightColorScheme.onSurface),
         brightness: Brightness.light,
         splashFactory: NoSplash.splashFactory,
         primaryColor: _lightColorScheme.primary,
@@ -93,7 +93,7 @@ class AdwaitaThemeData {
           color: _lightColorScheme.onSurface.withOpacity(0.12),
         ),
         dialogBackgroundColor: _lightColorScheme.background,
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
           backgroundColor: _lightColorScheme.background,
           shape: getDialogShape(Colors.black),
         ),
@@ -142,7 +142,7 @@ class AdwaitaThemeData {
   /// A default dark theme.
   static ThemeData dark({String? fontFamily}) => ThemeData(
         fontFamily: fontFamily,
-        tabBarTheme: TabBarTheme(labelColor: _darkColorScheme.onBackground),
+        tabBarTheme: TabBarThemeData(labelColor: _darkColorScheme.onBackground),
         brightness: Brightness.dark,
         splashFactory: NoSplash.splashFactory,
         primaryColor: _darkColorScheme.primary,
@@ -153,7 +153,7 @@ class AdwaitaThemeData {
           color: _darkColorScheme.onSurface.withOpacity(0.12),
         ),
         dialogBackgroundColor: _darkColorScheme.background,
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
           backgroundColor: _darkColorScheme.background,
           shape: getDialogShape(),
         ),
