@@ -30,3 +30,6 @@ build/
 linux/
 example/linux/
 credentials.json
+
+# FVM Version Cache
+.fvm/
